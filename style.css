@@ -1,0 +1,472 @@
+.top-bar {
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 0;
+}
+.top-bar.no-wrap {
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.top-bar.no-wrap > div {
+  flex-shrink: 1; /* allow shrinking */
+  min-width: 0; /* avoid overflowing */
+}
+
+.top-bar.no-wrap span {
+  white-space: nowrap; /* prevent line breaks inside text */
+  font-size: clamp(5px, 2vw, 16px); /* responsive font size */
+}
+.topbar-logo {
+  height: 15px;          /* main logo height */
+  margin-right: 8px;     /* spacing between logo and text */
+}
+
+.topbar-icon {
+  height: 15px;          /* small icons (email/phone) */
+  margin-right: 6px;
+}
+
+.top-bar span {
+  white-space: nowrap;
+}
+/*Blue Bar*/
+.blue-strip {
+  background: linear-gradient(to right, #00a6eb, #0059b3, #0073e6, #0066cc, #008080, #009933);
+  height: 6px;
+  width: 100%;
+}
+/* Control spacing around title */
+.me-logo {
+  margin-right: 40px;
+  margin-bottom:35px;
+}
+
+.ms-logo {
+  margin-left: 40px;
+}
+
+/* Responsive Logo sizing */
+.logo {
+  height: clamp(1px, 8vw, 100px); /* shrinks proportionally */
+  flex-shrink: 1;
+}
+
+.bauet-logo {
+  height: clamp(1px, 8vw, 140px);
+  flex-shrink: 1;
+}
+
+/* Title styling */
+.conference-title {
+  font-size: clamp(1px, 2vw, 40px); /* responsive font size */
+  font-weight: 600;
+  color: #1e3c72;
+  line-height: 1.4;
+  text-align: center;
+  flex-shrink: 1; /* allows shrinking */
+  margin: 0 10px;
+  white-space: nowrap; /* keep title in one line */
+}
+
+/* On medium+ screens, justify text */
+@media (min-width: 100px) {
+  .conference-title {
+    text-align: justify;
+  }
+}
+
+/* Header background */
+header {
+  background-image: url('images/IEECIT 2026 Logo_Watermark.png');
+  background-size: clamp(10px, 80vw, 1500px) auto;
+  background-position:75% 20%;
+  background-repeat: no-repeat;
+  color: white; 
+
+}
+
+
+/* Make header row behave as one line with shrink */
+.header-row {
+  flex-wrap: nowrap; /* keep everything in one line */
+  overflow-x: auto; /* scroll if extremely narrow */
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.header-row img {
+  flex-shrink: 1;
+  max-width: 100%;
+}
+
+.header-row h1 {
+  flex-shrink: 1;
+  min-width: 0; /* needed for flex shrink to work */
+}
+.navbar{
+  background: linear-gradient(to right, #00a6eb, #0059b3, #124578, #063b70, #008080, #009933);
+  padding: 0px 0px;
+}
+.nav-link{
+  color: white;
+  font-weight: bold;
+}
+/* Default: no border for small screens */
+.nav-item {
+  border-right: none;
+}
+
+/* Add right border only for larger screens */
+@media (min-width: 992px) { /* Bootstrap's lg breakpoint */
+  .nav-item {
+    border-right: 3px solid white;
+  }
+}
+.navbar-nav .nav-link:hover {
+  color: white;               /* text color */
+  background-color:none;  /* background color (blue) */
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  color: white;
+}
+
+
+
+.bg-image {
+  background-image: url('images/Capture.PNG'); /* Replace with your image URL */
+  background-size: cover;       /* Scale the image to cover the div */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating */
+  width: 100%;                  /* Full width */
+  height: 200px;                 /* Responsive height (60% of viewport height) */
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .bg-image {
+    height: 50px; /* Adjust height for smaller screens */
+  }
+}
+
+/*Announcement*/
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #00a6eb, #0059b3, #124578, #063b70, #008080, #009933);
+  
+}
+
+.announcement-label {
+  background: #1d70b7;
+  color: white;
+  padding: 8px 25px;
+  font-weight: bold;
+  font-size: 20px;
+  white-space: nowrap;
+  border-right: 3px solid white;
+}
+
+.announcement-text {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: rgb(219, 219, 237);
+  overflow: hidden;           /* hide overflow */
+  width: 1500px;
+  height: 46px;               /* fixed width */
+  position: relative;
+  font-size: 20px;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;         /* start off-screen */
+  animation: move-left 10s linear infinite;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.dropdown-menu{
+  padding: 2px;
+  border-radius:0%;
+}
+.dropdown-item{
+  color: white;
+  background-color: #124578;
+  border-bottom: 2px solid white;
+}
+.dropdown-item:hover{
+  background-color:#2f844b !important;
+  color: white;
+}
+/*Keynote*/
+.section-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 3px;
+      background-color: green;
+      margin-top: 5px;
+    }
+    .speaker-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #24527a; /* same placeholder blue */
+    }
+    .speaker-card h6 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .speaker-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+/*About IEECIT*/
+   .section-title2 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 3px;
+      background-color: green;
+      margin-top: 5px;
+    }
+    .important-dates {
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      padding: 30px;
+      height: 100%;
+    }
+    .important-dates h4 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .important-dates h4::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: green;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .date-item {
+      margin-bottom: 20px;
+    }
+    .date-item i {
+      color: green;
+      margin-right: 8px;
+    }
+    .date-item span {
+      color: green;
+      font-weight: 500;
+    }
+    /*Submission*/
+    .submission-box {
+      background-color: #f1f2f2;   /* light grey background */
+      border-radius: 15px;        /* smooth rounded corners */
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 40px auto;          /* center horizontally */
+    }
+
+    .submission-box p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #111;
+    }
+
+    .btn-submit {
+      background-color: #0a944b;  /* green button */
+      color: white;
+      font-size: 1.1rem;
+      padding: 10px 25px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-submit:hover {
+      background-color: #087a3f;  /* darker green hover */
+      color: white;
+    }
+    /*Track*/
+    .scope {
+      background-color: #204b77; /* Blue background */
+      font-family: 'Segoe UI', sans-serif;
+      color: #000;
+      padding: 3% 5%;
+    }
+
+    .section-title3 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.8rem;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .section-title3::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 4px;
+      background: #3ad47a;
+      left: 0;
+      bottom: -5px;
+      border-radius: 2px;
+    }
+
+    /* --- Carousel control buttons --- */
+    .carousel-controls-top {
+      position:absolute;
+      top: -60px;
+      right: 15px;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+      position: static !important;
+      inset: auto !important;
+      transform: none !important;
+    }
+
+    .custom-control {
+      width: 30px;
+      height: 30px;
+      border: 2px solid white;
+      border-radius: 6px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    /* --- Track Cards --- */
+    .track-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      height: 100%;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .track-card h5 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .track-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .carousel-controls-top {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+    /* ===== FOOTER SECTION ===== */
+    footer {
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 60px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer h5 {
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    footer h5::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #1db954; /* green underline */
+      margin-top: 5px;
+    }
+
+    footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .footer-logo img {
+      max-width: 240px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      margin-bottom: 4px;
+      font-size: 20px;
+    }
+
+    .footer-contact i {
+      color: #1db954;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .footer-contact a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      color: #1db954;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      footer {
+        text-align: center;
+      }
+
+      footer h5::after {
+        margin: 8px auto;
+      }
+
+      .footer-logo {
+        margin-bottom: 30px;
+      }
+    }
